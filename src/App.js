@@ -1,3 +1,5 @@
+import "nes.css/css/nes.min.css";
+
 export default function App() {
-  return <div />;
+  return <span className="nes-text is-primary">PokéDex</span>;
 }
