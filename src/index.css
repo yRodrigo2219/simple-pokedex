@@ -9,14 +9,18 @@ body {
   font-family: "Press Start 2P";
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: none;
+  padding: 0 2rem;
 }
 
 #poke-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  justify-content: center;
 }
 
 #root > .container {
+  min-width: 30rem;
   max-width: 980px;
   margin: 0 auto;
   margin-top: 80px;
@@ -25,6 +29,17 @@ body {
 .pagination {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 1.5rem 0 0;
   margin-bottom: 0;
+  justify-content: center;
+}
+
+.pokemon {
+  min-width: 22rem;
+}
+
+.poke-id {
+  color: #757575;
+  font-size: 0.75rem;
 }

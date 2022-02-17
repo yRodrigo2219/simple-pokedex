@@ -15,6 +15,5 @@ export default function usePoke(limit = 10, offset = 0) {
       .finally(() => setIsFetching(false));
   }, [offset]);
 
-  console.log(data);
   return { data, isFetching, error };
 }
