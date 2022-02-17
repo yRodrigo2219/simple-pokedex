@@ -10,8 +10,11 @@ export default function usePoke(limit = 10, offset = 0) {
 
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => setError(err))
+      .then((data) => {
+        setData(data);
+        setError(null);
+      })
+      .catch((err) => setError(err + Date.now())) // Date to get a different error every time (only important to the error-modal)
       .finally(() => setIsFetching(false));
   }, [offset]);
 

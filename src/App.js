@@ -15,7 +15,7 @@ export default function App() {
     <div className="container">
       <section className="nes-container with-title">
         <h3 className="title">PokéDex</h3>
-        {error ? <ErrorMessage /> : null}
+        <ErrorMessage show={error} />
 
         {isFetching ? (
           <Loading />

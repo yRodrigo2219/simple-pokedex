@@ -43,3 +43,9 @@ body {
   color: #757575;
   font-size: 0.75rem;
 }
+
+.dialog-menu {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2rem;
+}
