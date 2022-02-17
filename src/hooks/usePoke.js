@@ -6,12 +6,14 @@ export default function usePoke(limit = 10, offset = 0) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsFetching(true);
+
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => setError(err))
       .finally(() => setIsFetching(false));
-  }, []);
+  }, [offset]);
 
   console.log(data);
   return { data, isFetching, error };
