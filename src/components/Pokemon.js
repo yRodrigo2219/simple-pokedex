@@ -6,8 +6,10 @@ export default function Pokemon({ name, url }) {
   return (
     <section className="pokemon">
       <img src={imgUrl} alt={name} />
-      <span>{betterName}</span>
-      <span className="poke-id">#{pokeId.padStart(3, "0")}</span>
+      <div>
+        <span>{betterName}</span>
+        <span className="poke-id">#{pokeId.padStart(3, "0")}</span>
+      </div>
     </section>
   );
 }

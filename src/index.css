@@ -20,7 +20,6 @@ body {
 }
 
 #root > .container {
-  min-width: 30rem;
   max-width: 980px;
   margin: 0 auto;
   margin-top: 80px;
@@ -35,10 +34,6 @@ body {
   justify-content: center;
 }
 
-.pokemon {
-  min-width: 22rem;
-}
-
 .poke-id {
   color: #757575;
   font-size: 0.75rem;
@@ -48,4 +43,23 @@ body {
   display: flex;
   justify-content: flex-end;
   column-gap: 2rem;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 27rem) {
+  .pokemon {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 35rem) {
+  .pokemon {
+    flex-direction: row;
+    min-width: 20rem;
+  }
 }
