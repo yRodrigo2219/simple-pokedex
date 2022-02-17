@@ -19,10 +19,38 @@ body {
   justify-content: center;
 }
 
+header {
+  position: fixed;
+  padding: 0 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 4px solid #d3d3d3;
+  background-color: white;
+}
+
+header > .container {
+  display: flex;
+  align-items: baseline;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.nav-brand {
+  margin-bottom: 0.5rem;
+}
+
+.nav-brand > div {
+  display: flex;
+  justify-content: space-around;
+}
+
 #root > .container {
   max-width: 980px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 .pagination {
